@@ -20,7 +20,7 @@ const countryColors = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#6366f1', '#
 
 
 // Define API_BASE_URL in the global scope
-const API_BASE_URL = `${window.location.protocol}//${window.location.hostname}:5000/api`;
+const API_BASE_URL = `${window.location.protocol}//${window.location.hostname}/api`;
 
 
 document.addEventListener('DOMContentLoaded', async function() {
