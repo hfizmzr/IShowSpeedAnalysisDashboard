@@ -1,0 +1,157 @@
+{
+    "2022-11": {
+        "negative": 60,
+        "neutral": 389,
+        "positive": 151
+    },
+    "2022-12": {
+        "negative": 237,
+        "neutral": 1109,
+        "positive": 754
+    },
+    "2023-01": {
+        "negative": 268,
+        "neutral": 1168,
+        "positive": 764
+    },
+    "2023-02": {
+        "negative": 227,
+        "neutral": 1134,
+        "positive": 639
+    },
+    "2023-03": {
+        "negative": 247,
+        "neutral": 965,
+        "positive": 688
+    },
+    "2023-04": {
+        "negative": 266,
+        "neutral": 804,
+        "positive": 530
+    },
+    "2023-05": {
+        "negative": 176,
+        "neutral": 744,
+        "positive": 480
+    },
+    "2023-06": {
+        "negative": 261,
+        "neutral": 894,
+        "positive": 645
+    },
+    "2023-07": {
+        "negative": 319,
+        "neutral": 892,
+        "positive": 889
+    },
+    "2023-08": {
+        "negative": 132,
+        "neutral": 484,
+        "positive": 284
+    },
+    "2023-09": {
+        "negative": 231,
+        "neutral": 868,
+        "positive": 601
+    },
+    "2023-10": {
+        "negative": 214,
+        "neutral": 821,
+        "positive": 565
+    },
+    "2023-11": {
+        "negative": 243,
+        "neutral": 781,
+        "positive": 476
+    },
+    "2023-12": {
+        "negative": 209,
+        "neutral": 855,
+        "positive": 536
+    },
+    "2024-01": {
+        "negative": 231,
+        "neutral": 1039,
+        "positive": 630
+    },
+    "2024-02": {
+        "negative": 122,
+        "neutral": 518,
+        "positive": 360
+    },
+    "2024-03": {
+        "negative": 279,
+        "neutral": 829,
+        "positive": 592
+    },
+    "2024-04": {
+        "negative": 305,
+        "neutral": 797,
+        "positive": 698
+    },
+    "2024-05": {
+        "negative": 335,
+        "neutral": 1050,
+        "positive": 815
+    },
+    "2024-06": {
+        "negative": 248,
+        "neutral": 868,
+        "positive": 684
+    },
+    "2024-07": {
+        "negative": 349,
+        "neutral": 1189,
+        "positive": 862
+    },
+    "2024-08": {
+        "negative": 269,
+        "neutral": 831,
+        "positive": 500
+    },
+    "2024-09": {
+        "negative": 212,
+        "neutral": 804,
+        "positive": 584
+    },
+    "2024-10": {
+        "negative": 139,
+        "neutral": 534,
+        "positive": 327
+    },
+    "2024-11": {
+        "negative": 213,
+        "neutral": 861,
+        "positive": 626
+    },
+    "2024-12": {
+        "negative": 145,
+        "neutral": 686,
+        "positive": 369
+    },
+    "2025-01": {
+        "negative": 275,
+        "neutral": 776,
+        "positive": 449
+    },
+    "2025-02": {
+        "negative": 144,
+        "neutral": 460,
+        "positive": 396
+    },
+    "2025-03": {
+        "negative": 339,
+        "neutral": 984,
+        "positive": 877
+    },
+    "2025-04": {
+        "negative": 167,
+        "neutral": 647,
+        "positive": 486
+    },
+    "2025-05": {
+        "negative": 169,
+        "neutral": 529,
+        "positive": 402
+    }
+}

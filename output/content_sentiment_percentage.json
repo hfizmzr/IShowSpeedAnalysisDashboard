@@ -1,0 +1,38 @@
+[
+    {
+        "content_type":"Challenges \/ IRL",
+        "positive_pct":0.3583,
+        "neutral_pct":0.4885,
+        "negative_pct":0.1532
+    },
+    {
+        "content_type":"Gaming",
+        "positive_pct":0.3574226804,
+        "neutral_pct":0.4974226804,
+        "negative_pct":0.1451546392
+    },
+    {
+        "content_type":"Memes",
+        "positive_pct":0.3583333333,
+        "neutral_pct":0.5283333333,
+        "negative_pct":0.1133333333
+    },
+    {
+        "content_type":"Music",
+        "positive_pct":0.2925,
+        "neutral_pct":0.5025,
+        "negative_pct":0.205
+    },
+    {
+        "content_type":"Other",
+        "positive_pct":0.3471282051,
+        "neutral_pct":0.5237435897,
+        "negative_pct":0.1291282051
+    },
+    {
+        "content_type":"Viral moments \/ Clickbait",
+        "positive_pct":0.41,
+        "neutral_pct":0.44,
+        "negative_pct":0.15
+    }
+]

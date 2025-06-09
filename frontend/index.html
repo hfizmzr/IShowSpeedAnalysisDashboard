@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IShowSpeed</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-8">
+            <div class="flex items-center">
+                <!-- <i class="fab fa-youtube text-red-600 text-4xl mr-3"></i> -->
+                <h1 class="text-3xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
+                    IShowSpeed: The Rise of a Digital Phenomenon and the Future of Content Creation
+                </h1>
+            </div>
+        </header>
+
+        <!-- Overview Section -->
+        <section class="mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <!-- Subscribers Card -->
+                <div class="bg-gray-800 rounded-xl p-6 shadow-lg border-l-4 border-blue-500">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-gray-400">Subscribers</p>
+                            <h3 id="subscribersCount" class="text-3xl font-bold mt-2">1.24M</h3>
+                            <!-- <p class="text-green-400 mt-2 flex items-center">
+                                <i class="fas fa-arrow-up mr-1"></i> 12.4% from last month
+                            </p> -->
+                        </div>
+                        <i class="fas fa-users text-blue-400 text-4xl opacity-30"></i>
+                    </div>
+                </div>
+                
+                <!-- Views Card -->
+                <div class="bg-gray-800 rounded-xl p-6 shadow-lg border-l-4 border-blue-500">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-gray-400">Total Views</p>
+                            <h3 id="viewsCount" class="text-3xl font-bold mt-2">24.8M</h3>
+                            <!-- <p class="text-green-400 mt-2 flex items-center">
+                                <i class="fas fa-arrow-up mr-1"></i> 8.2% from last month
+                            </p> -->
+                        </div>
+                        <i class="fas fa-eye text-blue-400 text-4xl opacity-30"></i>
+                    </div>
+                </div>
+                
+                <!-- Engagement Card -->
+                <div class="bg-gray-800 rounded-xl p-6 shadow-lg border-l-4 border-blue-500">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-gray-400">Engagement Rate</p>
+                            <h3 id="engagementRate" class="text-3xl font-bold mt-2">6.8%</h3>
+                            <!-- <p class="text-red-400 mt-2 flex items-center">
+                                <i class="fas fa-arrow-down mr-1"></i> 1.2% from last month
+                            </p> -->
+                        </div>
+                        <i class="fas fa-heart text-blue-400 text-4xl opacity-30"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                <h3 class="text-xl font-semibold mb-4">Who is IShowSpeed</h3>
+                <p id="channelDescription" class="text-gray-300 leading-relaxed">
+                    This channel focuses on tech reviews, tutorials, and gadget comparisons. With consistent uploads 3 times a week,
+                    the channel has seen steady growth over the past year. The content strategy emphasizes in-depth analysis,
+                    hands-on demonstrations, and viewer Q&A sessions which have contributed to high engagement rates.
+                </p>
+            </div>
+        </section>
+
+        <!-- Trend Analysis Section -->
+        <section class="mb-12">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-semibold">Trend Analysis</h2>
+                <!-- <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition">
+                    <i class="fas fa-download mr-2"></i>Export Data
+                </button> -->
+            </div>
+            
+            <div class="bg-gray-800 rounded-xl p-6 shadow-lg mb-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 id="monthlyChartTitle" class="text-xl font-semibold">Monthly Views</h3>
+                    <select class="bg-gray-700 px-3 py-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option selected>Monthly Views</option>
+                        <option>Monthly Growth Views</option>
+                        <option>Monthly Likes</option>
+                        <option>Monthly Growth Likes</option>
+                    </select>
+                </div>
+                <div class="h-80">
+                    <canvas id="monthlyChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
+                <!-- <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">View Duration</h3>
+                    <div class="h-64">
+                        <canvas id="durationChart"></canvas>
+                    </div>
+                </div> -->
+                <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Top Performing Videos</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-3 bg-gray-700 rounded-lg">
+                            <div class="flex items-center">
+                                <img src="https://via.placeholder.com/60" alt="Video thumbnail" class="w-12 h-12 rounded-md mr-3">
+                                <div>
+                                    <p class="font-medium">iPhone 15 Pro Review</p>
+                                    <p class="text-sm text-gray-400">1.2M views</p>
+                                </div>
+                            </div>
+                            <!-- <span class="bg-blue-600 text-xs px-2 py-1 rounded-full">Top 1%</span> -->
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-gray-700 rounded-lg">
+                            <div class="flex items-center">
+                                <img src="https://via.placeholder.com/60" alt="Video thumbnail" class="w-12 h-12 rounded-md mr-3">
+                                <div>
+                                    <p class="font-medium">MacBook Air M2 Test</p>
+                                    <p class="text-sm text-gray-400">980K views</p>
+                                </div>
+                            </div>
+                            <!-- <span class="bg-blue-600 text-xs px-2 py-1 rounded-full">Top 3%</span> -->
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-gray-700 rounded-lg">
+                            <div class="flex items-center">
+                                <img src="https://via.placeholder.com/60" alt="Video thumbnail" class="w-12 h-12 rounded-md mr-3">
+                                <div>
+                                    <p class="font-medium">Windows 11 vs macOS</p>
+                                    <p class="text-sm text-gray-400">850K views</p>
+                                </div>
+                            </div>
+                            <!-- <span class="bg-blue-600 text-xs px-2 py-1 rounded-full">Top 5%</span> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sentiment Analysis Section -->
+        <section class="mb-12">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-semibold">Sentiment Analysis</h2>
+                <!-- <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition">
+                    <i class="fas fa-sync-alt mr-2"></i>Refresh
+                </button> -->
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <!-- Column (2/3): Sentiment Charts -->
+                <div class="bg-gray-800 rounded-xl p-6 shadow-lg md:col-span-2">
+                    <h3 class="text-xl font-semibold mb-4">Overall Sentiment</h3>
+            
+                    <!-- Main (large) chart -->
+                    <div class="flex justify-center mb-6">
+                        <div class="h-64 w-full max-w-md bg-gray-700 rounded-lg p-4 flex items-center justify-center">
+                            <canvas id="sentimentChart" class="h-48 w-full"></canvas>
+                        </div>
+                    </div>
+            
+                    <!-- 2x2 grid of smaller charts -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="h-48 bg-gray-700 rounded-lg p-4 flex items-center justify-center">
+                            <canvas id="sentimentChart2" class="h-32 w-full"></canvas>
+                        </div>
+                        <div class="h-48 bg-gray-700 rounded-lg p-4 flex items-center justify-center">
+                            <canvas id="sentimentChart3" class="h-32 w-full"></canvas>
+                        </div>
+                        <div class="h-48 bg-gray-700 rounded-lg p-4 flex items-center justify-center">
+                            <canvas id="sentimentChart4" class="h-32 w-full"></canvas>
+                        </div>
+                        <div class="h-48 bg-gray-700 rounded-lg p-4 flex items-center justify-center">
+                            <canvas id="sentimentChart5" class="h-32 w-full"></canvas>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Column (1/3): Comments Section -->
+                <div class="flex flex-col gap-6 md:col-span-1">
+                    <!-- Top Positive Comments -->
+                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                        <h3 id="positive-comments" class="text-xl font-semibold mb-4">Top Positive Comments</h3>
+                        <div class="space-y-3">
+                            <div class="bg-gray-700 p-3 rounded-lg">
+                                <p class="text-sm">"This is the most thorough review I've seen. Thanks for the great content!"</p>
+                                <p class="text-xs text-gray-400 mt-1">- User123, 2 days ago</p>
+                            </div>
+                            <div class="bg-gray-700 p-3 rounded-lg">
+                                <p class="text-sm">"Your tutorials helped me fix my laptop. You're a lifesaver!"</p>
+                                <p class="text-xs text-gray-400 mt-1">- TechFan99, 1 week ago</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Common Negative Feedback -->
+                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                        <h3 id="negative-comments" class="text-xl font-semibold mb-4">Common Negative Feedback</h3>
+                        <div class="space-y-3">
+                            <div class="bg-gray-700 p-3 rounded-lg">
+                                <p class="text-sm">"The audio quality could be better in some parts of the video."</p>
+                                <p class="text-xs text-gray-400 mt-1">- AudioCritic, 3 days ago</p>
+                            </div>
+                            <div class="bg-gray-700 p-3 rounded-lg">
+                                <p class="text-sm">"Would love to see more comparisons between brands."</p>
+                                <p class="text-xs text-gray-400 mt-1">- ComparisonLover, 5 days ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                <h3 class="text-xl font-semibold mb-4">Sentiment Over Time</h3>
+                <div class="h-64">
+                    <canvas id="sentimentTrendChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Analysis Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6">Content Analysis</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Video Categories Performance</h3>
+                    <div class="h-64">
+                        <canvas id="categoryChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Reaction For Each Video Categories</h3>
+                    <div class="h-64">
+                        <canvas id="reactionChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                <h3 class="text-xl font-semibold mb-4">Tweet Categories Performance</h3>
+                <!-- <div class="flex items-center justify-between mb-4">
+                    <p class="text-gray-400">Average view duration by video length</p>
+                </div> -->
+                <div class="h-64">
+                    <canvas id="tweetChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Analysis Section -->
+        <section class="mb-12">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-semibold">Comparison Analysis</h2>
+            </div>
+            
+            <!-- Monthly Views Comparison -->
+            <div class="bg-gray-800 rounded-xl p-6 shadow-lg mb-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-semibold">Monthly Views Comparison</h3>
+                </div>
+                <div class="chart-container" style="height: 320px;">
+                    <canvas id="comparisonChart"></canvas>
+                </div>
+            </div>
+            
+            <!-- Grid Layout for Multiple Charts -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+                <!-- Engagement Radar - Takes up 2 columns on large screens -->
+                <div class="bg-gray-800 rounded-xl p-6 shadow-lg lg:col-span-2">
+                    <h3 class="text-xl font-semibold mb-4">Engagement Radar</h3>
+                    <div class="chart-container" style="height: 350px;">
+                        <canvas id="engagementComparisonChart"></canvas>
+                    </div>
+                </div>
+                
+                <!-- Side Charts Column -->
+                <div class="space-y-6">
+                    <!-- Upload Frequency -->
+                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                        <h3 class="text-xl font-semibold mb-4">Upload Frequency</h3>
+                        <div class="chart-container" style="height: 160px;">
+                            <canvas id="frequencyChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <!-- Sentiment Comparison -->
+                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                        <h3 class="text-xl font-semibold mb-4">Sentiment Score</h3>
+                        <div class="chart-container" style="height: 160px;">
+                            <canvas id="sentimentComparisonChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tweet Categories Performance -->
+            <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-semibold">Tweet Categories Performance</h3>
+                </div>
+                <div class="chart-container" style="height: 300px;">
+                    <canvas id="tweetComparisonChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prediction Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6">Growth Prediction</h2>
+            
+            <div class="bg-gray-800 rounded-xl p-6 shadow-lg mb-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-semibold">Views Growth Forecast</h3>
+                </div>
+                <div class="h-80">
+                    <canvas id="predictionChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Country Prediction</h3>
+                    <canvas id="countryPredictionChart" class="mb-6"></canvas>
+                    <div id="countryLegend" class="space-y-2 text-sm text-gray-300"></div>
+                </div>
+                <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Content Recommendations</h3>
+                    <div id="contentRecommendations" class="space-y-3 text-gray-300 text-sm">
+                        <div class="flex items-start">
+                            <div class="bg-blue-600 p-2 rounded-full mr-3 mt-1">
+                                <i class="fas fa-lightbulb text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">More comparison videos</p>
+                                <p class="text-sm text-gray-400">Your comparison videos perform 23% better than average</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-600 p-2 rounded-full mr-3 mt-1">
+                                <i class="fas fa-clock text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">Optimal video length</p>
+                                <p class="text-sm text-gray-400">12-15 minute videos have the highest completion rate</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-600 p-2 rounded-full mr-3 mt-1">
+                                <i class="fas fa-calendar-alt text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">Best posting days</p>
+                                <p class="text-sm text-gray-400">Tuesday and Thursday at 3 PM show highest engagement</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <!-- <footer class="border-t border-gray-800 pt-8 mt-12">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <i class="fab fa-youtube text-red-600 text-2xl mr-3"></i>
+                    <span class="text-xl font-semibold">YouTuber Analytics</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Help</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Contact</a>
+                </div>
+            </div>
+            <p class="text-center text-gray-500 mt-8 text-sm">
+                &copy; 2023 YouTuber Analytics Dashboard. All rights reserved.
+            </p>
+        </footer> -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

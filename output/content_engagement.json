@@ -1,0 +1,44 @@
+[
+    {
+        "content_type": "Challenges / IRL",
+        "number_of_videos": 100,
+        "avg_views": 5480655.73,
+        "avg_likes": 226305.29,
+        "avg_comments": 6234.77
+    },
+    {
+        "content_type": "Gaming",
+        "number_of_videos": 194,
+        "avg_views": 4684407.164948453,
+        "avg_likes": 154853.15979381444,
+        "avg_comments": 6002.716494845361
+    },
+    {
+        "content_type": "Memes",
+        "number_of_videos": 6,
+        "avg_views": 2851506.3333333335,
+        "avg_likes": 106661.83333333333,
+        "avg_comments": 1919.6666666666667
+    },
+    {
+        "content_type": "Music",
+        "number_of_videos": 4,
+        "avg_views": 6196566.75,
+        "avg_likes": 285265.75,
+        "avg_comments": 14621.5
+    },
+    {
+        "content_type": "Other",
+        "number_of_videos": 195,
+        "avg_views": 7317119.723076923,
+        "avg_likes": 308233.8512820513,
+        "avg_comments": 6382.589743589743
+    },
+    {
+        "content_type": "Viral moments / Clickbait",
+        "number_of_videos": 1,
+        "avg_views": 1801014.0,
+        "avg_likes": 68469.0,
+        "avg_comments": 2366.0
+    }
+]

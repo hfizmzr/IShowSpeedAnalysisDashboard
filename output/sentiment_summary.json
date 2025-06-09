@@ -1,0 +1,12 @@
+{
+    "vader": {
+        "neutral": 25310,
+        "positive": 17659,
+        "negative": 7031
+    },
+    "textblob": {
+        "neutral": 36681,
+        "positive": 9057,
+        "negative": 4262
+    }
+}

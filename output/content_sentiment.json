@@ -1,0 +1,38 @@
+[
+    {
+        "content_type": "Challenges / IRL",
+        "positive": 3583,
+        "neutral": 4885,
+        "negative": 1532
+    },
+    {
+        "content_type": "Gaming",
+        "positive": 6934,
+        "neutral": 9650,
+        "negative": 2816
+    },
+    {
+        "content_type": "Memes",
+        "positive": 215,
+        "neutral": 317,
+        "negative": 68
+    },
+    {
+        "content_type": "Music",
+        "positive": 117,
+        "neutral": 201,
+        "negative": 82
+    },
+    {
+        "content_type": "Other",
+        "positive": 6769,
+        "neutral": 10213,
+        "negative": 2518
+    },
+    {
+        "content_type": "Viral moments / Clickbait",
+        "positive": 41,
+        "neutral": 44,
+        "negative": 15
+    }
+]
