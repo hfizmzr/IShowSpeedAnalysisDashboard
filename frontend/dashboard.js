@@ -24,7 +24,7 @@ const countryColors = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#6366f1', '#
 // const API_BASE_URL = `https://ishowspeedanalysisdashboard.onrender.com/api`;
 const API_BASE_URL = window.location.hostname === "localhost"
   ? "http://localhost:5000/api"
-  : "https://ishowspeed-backend.onrender.com/api";
+  : "https://ishowspeedanalysisdashboard.onrender.com/api";
 
 
 document.addEventListener('DOMContentLoaded', async function() {
